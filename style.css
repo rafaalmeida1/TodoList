@@ -1,0 +1,145 @@
+:root {
+    --primary-color: #037AEB;
+    --secondary-color: #0F0F0B;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #CCC;
+    font: bold 2rem 'Open Sans', sans-serif;
+}
+
+.container {
+    background-color: var(--primary-color);
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 35px;
+    width: 55%;
+    border: none;
+    border-radius: 25px;
+}
+
+.todo {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.title {
+    display: flex;
+    background-color: var(--secondary-color);
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.item{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+}
+.item > div {
+    width: 80%;
+}
+.item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.item > input[type='button'],
+.item > input[type='checkbox'] {
+    width: 30px;
+    height: 30px;
+    font: inherit;
+}
+
+
+.item > input[type='checkbox']:checked  + div { /*ao marcar a caixinha, ele risca o item*/
+    text-decoration:line-through;
+}
+
+#removeAll > input[type='button'] {
+    width: 150px;
+    height: 40px;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-size: 20px;
+}
+
+#removeAll > input[type='button']:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: #f00;
+    color: #fff;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color:red;
+}
+
+.new-item{
+    display: flex;
+    background-color: #035AEB;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    margin: 10px;
+    font: inherit;
+}
+
+.new-item > input{
+    background-color: #035AEB;
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+}
+
+.new-item:hover{
+    transition: all .2s ease;
+    opacity: 0.8;
+}
+
+.new-item > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+    color: black;
+}
